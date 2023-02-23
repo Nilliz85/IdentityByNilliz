@@ -9,25 +9,35 @@
       content="Per Nilsen - Personal and professional blog about my journey to becoming a frontend developer, with topics like personal growth, coding, development and tech industry"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>IdentityByNilliz | Home</title>
+    <title>pernilsen.dev | Home</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <h2>IdentityByNilliz</h2>
-        <a href="./index.html">Home</a>
-        <a href="./about.html">About</a>
-        <a href="./blog.html">Blog</a>
-        <a href="./contact.html">contact</a>
-      </nav>
-      <div class="index-hero-section"></div>
-    </header>
-    <main>
-      <!-- The Loading Icon -->
-      <div class="preloader loader-gif" id="loading">
-        <img src="./assets/loader/Eclipse_loader_800px.gif" alt="a loading indicator that looks like an eclipse" />
-      </div>
-    </main>
-    <footer></footer>
+    <!-- The Loading Icon -->
+    <div class="preloader display-flex" id="loading">
+      <img src="./assets/loader/Eclipse_loader_800px.gif" alt="a loading indicator that looks like an eclipse" />
+    </div>
+
+    <div class="site">
+      <!-- Nav -->
+      <header class="header" id="header">
+        <nav class="navigation display-flex container">
+          <a class="logo" href="#">pernilsen.dev</a>
+          <ul class="nav-list display-flex">
+            <li><a href="./index.html"></a>Home</li>
+            <li><a href="./blog.html"></a>Blog</li>
+            <li><a href="./about.html"></a>About</li>
+            <li><a href="./contact.html"></a>Contact</li>
+          </ul>
+
+          <!-- <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./contact.html">contact</a> -->
+        </nav>
+        <div class="index-hero-section"></div>
+      </header>
+      <main></main>
+      <footer></footer>
+    </div>
   </body>
 </html>

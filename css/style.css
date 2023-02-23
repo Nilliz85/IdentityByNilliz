@@ -10,7 +10,7 @@
   --orange: #ffa238;
 }
 
-.loader-gif {
+.display-flex {
   display: flex;
   align-items: center;
 }
@@ -24,9 +24,14 @@
   background-color: var(--white);
   justify-content: center;
   z-index: 100;
+  display: none;
 }
 
 .preloader img {
   width: 25rem;
   height: 25rem;
+}
+
+.preloader.active {
+  display: flex;
 }
