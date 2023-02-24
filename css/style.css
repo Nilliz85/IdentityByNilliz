@@ -61,7 +61,7 @@
   width: 100%;
   left: 0;
   top: 0;
-  box-shadow: 0 5px 10px var(--black);
+  box-shadow: 0 5px 10px var(--grey2);
   z-index: 100;
 }
 
@@ -102,4 +102,40 @@
 
 .nav-list li a:hover {
   color: var(--primary);
+}
+
+/*-------------------- Content --------------------*/
+
+#content {
+  min-height: 70vh;
+}
+
+.blog-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+  gap: 3rem;
+}
+
+.blog {
+  background-color: var(--lightblue);
+  transition: all 500ms ease-out;
+}
+
+.blog:hover {
+  box-shadow: 0 5opx 10px var(--grey2);
+}
+
+.blog .blog-img {
+  margin: 1.5rem 1.5rem 0;
+  height: 25rem;
+}
+
+.blog .blog-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog .blog-text {
+  padding: 1.5rem;
 }
