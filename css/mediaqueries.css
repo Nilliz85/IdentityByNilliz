@@ -44,4 +44,13 @@
     font-size: 3rem;
     cursor: pointer;
   }
+
+  .blog .blog-text h2 {
+    height: 50px;
+    font-size: 2rem;
+  }
+
+  .blog .blog-img {
+    height: 20rem;
+  }
 }

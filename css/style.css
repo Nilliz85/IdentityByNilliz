@@ -5,6 +5,7 @@
   --secondary: #5faad9;
   --white: #fff;
   --lightblue: #a3c4d9;
+  --blogbox: rgba(163, 196, 217, 0.4);
   --black: #0d0d0d;
   --grey1: #dad8d8;
   --grey2: #828282;
@@ -117,12 +118,13 @@
 }
 
 .blog {
-  background-color: var(--lightblue);
+  background-color: var(--blogbox);
+  background: transparency;
   transition: all 500ms ease-out;
 }
 
 .blog:hover {
-  box-shadow: 0 5opx 10px var(--grey2);
+  box-shadow: 0 5px 10px var(--grey2);
 }
 
 .blog .blog-img {
@@ -138,4 +140,42 @@
 
 .blog .blog-text {
   padding: 1.5rem;
+}
+
+.blog .blog-text h2 {
+  margin-bottom: 1rem;
+  color: var(--black);
+  height: 60px;
+}
+
+.blog .category {
+  margin-right: 1rem;
+  background-color: var(--grey1);
+  border-radius: 3px;
+  font-size: 1.4rem;
+  padding: 0.5rem 1rem;
+}
+
+.blog .date {
+  font-size: 1.4rem;
+  color: var(--black);
+}
+
+.blog .author {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
+
+.blog .author-image {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 4rem;
+  width: 4rem;
+  margin-right: 2rem;
+}
+
+.blog .author-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
