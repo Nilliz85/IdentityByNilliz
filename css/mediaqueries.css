@@ -1,0 +1,20 @@
+/*-------------------- Site --------------------*/
+
+@media (max-width: 567px) {
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    max-width: 80%;
+    height: 100%;
+    background-color: var(--lightblue);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+    transition: all 500ms ease-in-out;
+  }
+  .nav-list.show {
+    left: 0;
+  }
+}

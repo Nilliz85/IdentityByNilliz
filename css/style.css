@@ -1,20 +1,25 @@
 /*-------------------- Color Variables --------------------*/
 
 :root {
-  --primary: #4db2ec;
+  --primary: #246dad;
+  --secondary: #5faad9;
   --white: #fff;
-  --black: #4d4d4d;
-  --black2: #222;
+  --lightblue: #a3c4d9;
+  --black: #0d0d0d;
   --grey1: #dad8d8;
   --grey2: #828282;
   --orange: #ffa238;
+  --teal: #05f2db;
 }
+
+/*-------------------- Container classes --------------------*/
 
 .display-flex {
   display: flex;
   align-items: center;
 }
 
+/*-------------------- loading icon --------------------*/
 .preloader {
   position: fixed;
   top: 0;
@@ -36,13 +41,15 @@
   display: flex;
 }
 
+/*---------------------------------------- Site ----------------------------------------*/
+
 .site {
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
 }
-
+/*-------------------- header --------------------*/
 .header {
   background-color: var(--white);
   height: 7.5rem;
@@ -54,11 +61,45 @@
   width: 100%;
   left: 0;
   top: 0;
-  box-shadow: 0 5px 10px rgb(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px var(--black);
   z-index: 100;
 }
 
+/*-------------------- Navigation Menu --------------------*/
 .navigation {
   justify-content: space-between;
   height: 100%;
+}
+/*--- Logo ---*/
+
+.logo img {
+  height: 20rem;
+  padding-top: 3rem;
+}
+
+/*--- Hamburger menu ---*/
+.hamburger-menu {
+  display: none;
+}
+
+/*--- nav-list ---*/
+.nav-list li:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-list li a {
+  display: inline-block;
+  color: var(--black);
+  font-size: 1.7rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: color 500ms ease-in-out;
+}
+
+.nav-list li a:hover {
+  color: var(--primary);
 }

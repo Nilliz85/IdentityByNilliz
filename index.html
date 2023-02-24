@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <!-- Meta -->
+    <title>pernilsen.dev | Home</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +16,7 @@
     <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="./css/style.css" />
-    <title>pernilsen.dev | Home</title>
+    <link rel="stylesheet" href="./css/mediaqueries.css" />
   </head>
   <body>
     <!-- The Loading Icon -->
@@ -24,25 +25,24 @@
     </div>
 
     <div class="site">
-      <!-- Nav -->
+      <!-- Navigation -->
       <header class="header" id="header">
-        <nav class="navigation display-flex container">
-          <a class="logo" href="#"><img src="./assets/pernilsen.dev-logo/default.png" alt="The company logo which consists of a closing html tag" /></a>
-          <ul class="nav-list display-flex">
-            <li><a href="./index.html"></a>Home</li>
-            <li><a href="./blog.html"></a>Blog</li>
-            <li><a href="./about.html"></a>About</li>
-            <li><a href="./contact.html"></a>Contact</li>
+        <nav class="navigation container display-flex">
+          <a class="logo" href="/#/"><img src="./assets/pernilsen.dev-logo/default.png" alt="The company logo which consists of a closing html tag" /></a>
+          <ul class="nav-list display-flex show">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
           </ul>
 
+          <!-- Hamburger menu -->
           <div class="hamburger-menu">
             <i class="bx bx-menu-alt-right"></i>
           </div>
-          <!-- <a href="./index.html">Home</a>
-          <a href="./about.html">About</a>
-          <a href="./blog.html">Blog</a>
-          <a href="./contact.html">contact</a> -->
         </nav>
+
+        <!-- Hero section -->
         <div class="index-hero-section"></div>
       </header>
       <main></main>
