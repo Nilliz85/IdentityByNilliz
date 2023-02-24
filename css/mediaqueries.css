@@ -17,4 +17,31 @@
   .nav-list.show {
     left: 0;
   }
+
+  .logo img {
+    height: 15rem;
+  }
+
+  .nav-list li:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .nav-list li {
+    margin: 0 0 0.5rem;
+    display: block;
+    width: 100%;
+  }
+
+  .nav-list li a {
+    color: var(--black);
+    font-size: 1.8rem;
+    width: 100%;
+  }
+
+  .hamburger-menu {
+    display: block;
+    color: var(--black);
+    font-size: 3rem;
+    cursor: pointer;
+  }
 }
