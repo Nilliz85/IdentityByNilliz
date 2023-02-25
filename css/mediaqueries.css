@@ -34,7 +34,6 @@
   }
 
   .nav-list li a {
-    color: var(--black);
     font-size: 1.8rem;
     width: 100%;
   }
