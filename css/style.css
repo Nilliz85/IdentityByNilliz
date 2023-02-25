@@ -10,6 +10,7 @@
   --black: #0d0d0d;
   --grey1: #dad8d8;
   --grey2: #828282;
+  --grey3: #414141;
   --orange: #ffa238;
   --teal: #05f2db;
 }
@@ -251,5 +252,5 @@ body {
 }
 
 .load:hover {
-  background-color: var(--black);
+  background-color: var(--grey3);
 }
