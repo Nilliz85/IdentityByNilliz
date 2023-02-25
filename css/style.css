@@ -120,15 +120,19 @@ a:visited {
 
 .nav-list li a {
   display: inline-block;
-  color: var(--black);
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   padding: 0.5rem 1rem;
   font-weight: 500;
   transition: color 500ms ease-in-out;
+  text-decoration: none;
+}
+
+.nav-list li a.active {
+  text-decoration: underline;
 }
 
 .nav-list li a:hover {
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 /*-------------------- Hero Section --------------------*/
