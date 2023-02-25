@@ -259,30 +259,28 @@ a:visited {
 }
 
 .footer-section {
-  height: 40vh;
-  margin-top: 10rem;
+  height: 60vh;
+  margin-top: 30rem;
 }
 
 .footer {
-  /* border-top: 5px solid;
-  border-image: linear-gradient(45deg, #bba0d1, #95aee1) 1; */
-  background-image: linear-gradient(to top, rgba(39, 118, 186, 0.01), rgba(252, 250, 250, 1)), linear-gradient(rgba(187, 160, 209, 1), rgba(149, 174, 225, 1));
+  background: linear-gradient(to top, rgba(39, 118, 186, 0.01), rgba(252, 250, 250, 1)), linear-gradient(rgba(187, 160, 209, 1), rgba(149, 174, 225, 1));
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
-.footer .footer-layout {
+.footer-layout {
+  height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: auto;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .footer-social {
-  margin-top: 15%;
   margin-bottom: 2rem;
 }
 
