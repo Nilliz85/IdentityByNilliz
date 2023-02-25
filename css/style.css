@@ -295,10 +295,14 @@ a:visited {
   margin-bottom: 2rem;
 }
 
+.footer-text {
+  margin-bottom: 8rem;
+}
+
 .footer a {
   font-size: 4rem;
 }
 
 .footer a:not(:last-child) {
-  margin-right: 3rem;
+  margin-right: 2rem;
 }
