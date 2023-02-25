@@ -1,26 +1,29 @@
 /*-------------------- Site --------------------*/
-
-@media (max-width: 567px) {
+/* (max-width: 567px) */
+@media (max-width: 800px) {
+  .navigation {
+    justify-content: space-between;
+  }
   .nav-list {
     position: fixed;
     top: 0;
     left: -100%;
     width: 100%;
-    max-width: 80%;
+    max-width: 60%;
     height: 100%;
     background-color: var(--lightblue);
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem 0;
     transition: all 500ms ease-in-out;
-    z-index: 1;
+    margin-top: 10rem;
   }
   .nav-list.show {
     left: 0;
   }
 
   .logo img {
-    height: 15rem;
+    height: 25rem;
   }
 
   .nav-list li:not(:last-child) {
@@ -34,7 +37,8 @@
   }
 
   .nav-list li a {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    margin-left: 3rem;
     width: 100%;
   }
 
