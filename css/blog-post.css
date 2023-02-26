@@ -1,0 +1,43 @@
+.top-fade-section {
+  height: 60vh;
+  z-index: -500;
+}
+
+.top-fade {
+  background: linear-gradient(to bottom, rgba(39, 118, 186, 0.01), rgba(252, 250, 250, 1)), linear-gradient(rgba(187, 160, 209, 1), rgba(149, 174, 225, 1));
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top-fade-layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.blog-post-full {
+  max-width: 125rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 300px 1fr;
+  gap: 2rem;
+}
+
+.blog-post-container {
+  background-color: var(--blogbox);
+  padding: 2rem;
+  border: 1px solid var(--secondary);
+}
+
+.blog-post-container .top {
+  text-align: center;
+}
+
+.blog-post-container .top h1 {
+  margin-bottom: 1rem;
+  color: var(--black);
+}
