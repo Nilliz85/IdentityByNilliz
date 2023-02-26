@@ -12,6 +12,10 @@
     height: 25rem;
     margin: 1rem 0;
   }
+
+  .form {
+    width: 30rem;
+  }
 }
 
 /*-------------------- 800px --------------------*/
@@ -83,6 +87,10 @@
 
   .logo img {
     height: 5rem;
+  }
+
+  .form {
+    max-width: 45rem;
   }
 }
 

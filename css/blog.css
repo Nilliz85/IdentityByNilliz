@@ -4,7 +4,8 @@
   min-height: 70vh;
 }
 
-.blog-layout {
+.blog-layout,
+.hidden {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
   gap: 5rem;
@@ -77,8 +78,9 @@
 }
 
 .load-button {
-  margin-top: 5rem;
+  grid-column: 1/-1;
   text-align: center;
+  margin: 5rem auto 5rem;
 }
 
 .load {
@@ -95,4 +97,9 @@
 
 .load:hover {
   background-color: var(--grey3);
+}
+
+.blog-hidden {
+  width: 100%;
+  /* display: none; */
 }
