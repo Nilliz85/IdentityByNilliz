@@ -1,14 +1,4 @@
 /*-------------------- 404 --------------------*/
-
-.top-fade-section {
-  height: 20vh;
-}
-
-.top-fade {
-  height: 75%;
-}
-
-/*-------------------- 404 --------------------*/
 .error404 {
   padding: 30px 0;
   margin-top: 1rem;
@@ -50,10 +40,5 @@
 /*-------------------- Footer --------------------*/
 
 .footer-section {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: 60vh;
   margin-top: 10rem;
-  z-index: -999;
 }
