@@ -13,6 +13,7 @@
     <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
     <link rel="stylesheet" href="./css/mediaqueries.css" />
   </head>
   <body>
@@ -54,9 +55,18 @@
       <main class="main" id="main">
         <form action="#" class="form" id="contactform">
           <h4>Contact Me</h4>
-          <input type="text" autocomplete="off" name="name" placeholder="Name" required />
-          <input type="email" autocomplete="off" name="email" placeholder="person@email.com" required />
-          <textarea name="message" id="message" cols="30" rows="10" placeholder="Message..." required></textarea>
+          <label for="name">Name:<span class="form-label-rule">(Should be more than 5 characters long)</span></label>
+          <input type="text" autocomplete="off" name="name" id="name" required minlength="6" />
+
+          <label for="email">Email address:<span class="form-label-rule">(Must be a valid email address)</span></label>
+          <input type="email" autocomplete="off" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="example@email.com" />
+
+          <label for="subject">Subject:<span class="form-label-rule">(Should be more than 15 characters long)</span></label>
+          <input type="text" autocomplete="off" name="subject" id="subject" required minlength="15" />
+
+          <label for="message">Message:<span class="form-label-rule">(Should be more than 25 characters long)</span></label>
+          <textarea name="message" id="message" cols="30" rows="10" required minlength="26" placeholder="Enter your message here"></textarea>
+
           <button type="submit" value="Send">Send</button>
         </form>
       </main>
@@ -78,5 +88,6 @@
       </footer>
     </div>
     <script src="./js/site.js"></script>
+    <script src="contact.js"></script>
   </body>
 </html>
