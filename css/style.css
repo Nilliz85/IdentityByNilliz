@@ -101,11 +101,15 @@ a:visited {
   margin-right: 10%;
   height: 100%;
 }
+
 /*--- Logo ---*/
+.logo {
+  display: flex;
+  align-items: center;
+}
 
 .logo img {
-  height: 40rem;
-  padding-top: 3rem;
+  height: 10rem;
 }
 
 /*--- Hamburger menu ---*/

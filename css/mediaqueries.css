@@ -38,10 +38,6 @@
     left: 0;
   }
 
-  .logo img {
-    height: 25rem;
-  }
-
   .nav-list li:not(:last-child) {
     margin-right: 0;
   }
@@ -84,6 +80,10 @@
     height: 100%;
     object-fit: cover;
   }
+
+  .logo img {
+    height: 5rem;
+  }
 }
 
 /*-------------------- 1200px --------------------*/
@@ -91,5 +91,9 @@
 @media (max-width: 1200px) {
   .blog-post-full {
     min-height: 30rem;
+  }
+
+  .logo img {
+    max-height: 8rem;
   }
 }
