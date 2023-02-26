@@ -1,5 +1,21 @@
-/*-------------------- Site --------------------*/
-/* (max-width: 567px) */
+/*-------------------- 800px --------------------*/
+/*-------------------- 800px --------------------*/
+/*-------------------- 567px --------------------*/
+
+@media (max-width: 567px) {
+  .blog-post-container .top h1 {
+    font-size: 2rem;
+  }
+
+  .blog-post-container .featured-image,
+  .blog-post-container .content .content-image {
+    height: 25rem;
+    margin: 1rem 0;
+  }
+}
+
+/*-------------------- 800px --------------------*/
+
 @media (max-width: 800px) {
   .navigation {
     justify-content: space-between;
@@ -56,5 +72,24 @@
 
   .blog .blog-img {
     height: 20rem;
+  }
+}
+
+/*-------------------- 850px --------------------*/
+
+@media (max-width: 850px) {
+  .blog-post-container .featured-image img,
+  .blog-post-container .content .content-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/*-------------------- 1200px --------------------*/
+
+@media (max-width: 1200px) {
+  .blog-post-full {
+    min-height: 30rem;
   }
 }

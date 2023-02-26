@@ -1,27 +1,3 @@
-/*-------------------- Top Fade section --------------------*/
-
-.top-fade-section {
-  height: 60vh;
-  z-index: -500;
-}
-
-.top-fade {
-  /* background: linear-gradient(to bottom, rgba(39, 118, 186, 0.1), rgba(252, 250, 250, 1)), linear-gradient(rgba(149, 174, 225, 1), rgba(187, 160, 209, 1));
-  background: linear-gradient(to bottom, rgba(39, 118, 186, 0.1), rgba(252, 250, 250, 1) 60%), linear-gradient(rgba(149, 174, 225, 1), rgba(187, 160, 209, 1) 50%); */
-  background: linear-gradient(rgba(149, 174, 225, 1), rgba(187, 160, 209, 0.5) 50%, rgba(252, 250, 250, 1));
-
-  height: 100%;
-  width: 100%;
-}
-
-.top-fade-layout {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-}
-
 /*-------------------- Main Section --------------------*/
 
 .blog-post-full {
@@ -95,8 +71,15 @@
 
 /*-------------------- Images --------------------*/
 .blog-post-container .featured-image img,
-.content .content-image img {
+.blog-post-container .content .content-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/*-------------------- Images --------------------*/
+
+.blog-post-container .content h4 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
