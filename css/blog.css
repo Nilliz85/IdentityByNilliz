@@ -43,6 +43,13 @@
   padding: 1.5rem;
 }
 
+.blog-header {
+  text-align: center;
+  margin-bottom: 10rem;
+  font-size: 7.5rem;
+  color: var(--grey3);
+}
+
 .blog .blog-text h2,
 .blog-visible .blog-text h2 {
   margin-bottom: 2rem;
@@ -87,6 +94,8 @@
   object-fit: cover;
 }
 
+/*-------------------- Load More Button --------------------*/
+
 .load-button {
   display: flex;
   justify-content: center;
@@ -111,6 +120,8 @@
   background-color: var(--grey3);
 }
 
+/*-------------------- Hidden Content --------------------*/
+
 .hidden {
   margin-top: -20rem;
   margin-bottom: 20rem;
@@ -119,6 +130,8 @@
 .hidden {
   display: none;
 }
+
+/*-------------------- footer --------------------*/
 
 .footer-section {
   height: 50vh;
