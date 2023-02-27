@@ -14,6 +14,14 @@
   }
 
   .form {
+    width: 25rem;
+  }
+
+  .about-container {
+    max-width: rem;
+  }
+
+  .profile-img {
     width: 30rem;
   }
 }
@@ -92,6 +100,15 @@
   .form {
     max-width: 45rem;
   }
+
+  .profile-img img {
+    max-width: 30rem;
+  }
+
+  .form-container,
+  .about-container {
+    width: 40rem;
+  }
 }
 
 /*-------------------- 1200px --------------------*/
@@ -103,5 +120,10 @@
 
   .logo img {
     max-height: 8rem;
+  }
+
+  .form-container,
+  .about-container {
+    max-width: 75rem;
   }
 }

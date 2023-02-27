@@ -1,9 +1,9 @@
 /*-------------------- Blog Content --------------------*/
 
 /*---------- Get Element ----------*/
-const blogPostsContainer = document.getElementById("blog-posts");
+const blogPostsContainer = document.getElementById("blog-layout");
 const loadMoreBtn = document.getElementById("load-more-btn");
-const loadMoreContainer = document.getElementById("load-more-container");
+const hiddenPostsContainer = document.getElementById("hidden");
 
 /*---------- Number Of Posts To Load ----------*/
 const postsPerLoad = 3;
@@ -16,7 +16,7 @@ let visiblePosts = 6;
 
 /*---------- Show button ----------*/
 if (visiblePosts < allBlogPosts.length) {
-  loadMoreContainer.style.display = "block";
+  loadMoreBtn.style.display = "block";
 }
 
 /*---------- Event Listener ----------*/
@@ -34,6 +34,11 @@ loadMoreBtn.addEventListener("click", () => {
 
   /*---------- Hide Button When All Posts Are Shown----------*/
   if (visiblePosts >= allBlogPosts.length) {
-    loadMoreContainer.style.display = "none";
+    loadMoreBtn.style.display = "none";
+  }
+
+  /*---------- Show Hidden Posts When All Posts Are Shown----------*/
+  if (visiblePosts >= allBlogPosts.length) {
+    hiddenPostsContainer.style.display = "block";
   }
 });

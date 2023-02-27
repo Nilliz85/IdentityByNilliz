@@ -99,7 +99,7 @@
   background-color: var(--grey3);
 }
 
-.blog-hidden {
+.hidden {
   width: 100%;
   display: none;
 }

@@ -2,6 +2,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 /*-------------------- Contact Form --------------------*/
+
+.form-container {
+  background-color: var(--blogbox);
+  border: 1px solid var(--secondary);
+  max-width: 100rem;
+  width: 100%;
+  padding: 2rem;
+  margin: auto;
+}
+
 .form {
   max-width: 55rem;
   margin: 0 auto;
