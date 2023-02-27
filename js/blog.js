@@ -1,12 +1,11 @@
-/*-------------------- Blog Content --------------------*/
-
 /*---------- Get Element ----------*/
 const blogPostsContainer = document.getElementById("blog-layout");
 const loadMoreBtn = document.getElementById("load-more-btn");
 const hiddenPostsContainer = document.getElementById("hidden");
+const hideButtonContainer = document.getElementById("load-more-container");
 
 /*---------- Number Of Posts To Load ----------*/
-const postsPerLoad = 3;
+const postsPerLoad = 10;
 
 /*---------- Get Blog Posts ----------*/
 const allBlogPosts = document.querySelectorAll(".blog");
@@ -20,25 +19,22 @@ if (visiblePosts < allBlogPosts.length) {
 }
 
 /*---------- Event Listener ----------*/
-loadMoreBtn.addEventListener("click", () => {
-  /*---------- Index Of Last Post To Show ----------*/
+loadMoreBtn.addEventListener("click", function () {
+  console.log("Clicked load more button");
   const lastPostIndex = Math.min(visiblePosts + postsPerLoad, allBlogPosts.length);
+  console.log("Last post index: ", lastPostIndex);
 
-  /*---------- Show Next Groupo Of Posts ----------*/
   for (let i = visiblePosts; i < lastPostIndex; i++) {
-    allBlogPosts[i].style.display = "grid";
+    allBlogPosts[i].style.display = "block";
+    allBlogPosts[i].classList.add("blog-visible");
   }
 
-  /*---------- Update Number Of Visible Post ----------*/
   visiblePosts = lastPostIndex;
+  console.log("Visible posts: ", visiblePosts);
 
-  /*---------- Hide Button When All Posts Are Shown----------*/
   if (visiblePosts >= allBlogPosts.length) {
     loadMoreBtn.style.display = "none";
-  }
-
-  /*---------- Show Hidden Posts When All Posts Are Shown----------*/
-  if (visiblePosts >= allBlogPosts.length) {
     hiddenPostsContainer.style.display = "block";
+    hideButtonContainer.style.display = "none";
   }
 });
