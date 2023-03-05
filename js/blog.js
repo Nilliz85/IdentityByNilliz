@@ -1,40 +1,127 @@
-/*---------- Get Element ----------*/
-const blogPostsContainer = document.getElementById("blog-layout");
-const loadMoreBtn = document.getElementById("load-more-btn");
-const hiddenPostsContainer = document.getElementById("hidden");
-const hideButtonContainer = document.getElementById("load-more-container");
+/*-------------- Select div/container --------------*/
+const blogContainer = document.querySelector(".blog-layout");
 
-/*---------- Number Of Posts To Load ----------*/
-const postsPerLoad = 10;
+/*-------------- Get Blog Posts --------------*/
+const getBlogPosts = async () => {
+  try {
+    isLoading = true;
 
-/*---------- Get Blog Posts ----------*/
-const allBlogPosts = document.querySelectorAll(".blog");
+    const response = await fetch(`https://headless-wp.pernilsen.dev/wp-json/wp/v2/posts?per_page=${perPage}&page=${currentPage}`);
+    const posts = await response.json();
 
-/*---------- Track Visible Posts ----------*/
-let visiblePosts = 6;
+    if (currentPage === 1) {
+      totalPages = response.headers.get("X-WP-TotalPages");
+    }
 
-/*---------- Show button ----------*/
-if (visiblePosts < allBlogPosts.length) {
-  loadMoreBtn.style.display = "block";
-}
+    showPosts(posts);
 
-/*---------- Event Listener ----------*/
-loadMoreBtn.addEventListener("click", function () {
-  console.log("Clicked load more button");
-  const lastPostIndex = Math.min(visiblePosts + postsPerLoad, allBlogPosts.length);
-  console.log("Last post index: ", lastPostIndex);
+    /*-------------- checks if request is succesfull or not --------------*/
+    isLoading = false;
+  } catch (error) {
+    console.error(error);
+    isLoading = false;
+  }
+};
 
-  for (let i = visiblePosts; i < lastPostIndex; i++) {
-    allBlogPosts[i].style.display = "block";
-    allBlogPosts[i].classList.add("blog-visible");
+/*-------------- Show Posts --------------*/
+const showPosts = (posts) => {
+  posts.forEach((post) => {
+    const postContainer = document.createElement("div");
+    postContainer.classList.add("blog");
+
+    const blogImg = document.createElement("div");
+    blogImg.classList.add("blog-img");
+
+    const excerpt = post.excerpt.rendered;
+
+    const imgSrc = post["_embedded"] && post["_embedded"]["wp:featuredmedia"] ? post["_embedded"]["wp:featuredmedia"][0]["source_url"] : "";
+
+    const blogImgHtml = `<a href="#"><img src="${imgSrc}" alt="" /></a>`;
+    blogImg.innerHTML = blogImgHtml;
+
+    const blogText = document.createElement("div");
+    blogText.classList.add("blog-text");
+
+    const title = post.title.rendered;
+
+    const blogTextHtml = `<h2><a href="#" data-post-id="${post.id}">${title}</a></h2>
+                            <p>${excerpt}</p>`;
+    blogText.innerHTML = blogTextHtml;
+
+    postContainer.appendChild(blogImg);
+    postContainer.appendChild(blogText);
+    blogContainer.appendChild(postContainer);
+
+    // Add event listener to the blog post's anchor tag
+    const postLink = blogText.querySelector("a");
+    postLink.addEventListener("click", (event) => {
+      event.preventDefault(); // prevent default link behavior
+      const postId = event.target.getAttribute("data-post-id");
+      window.location.href = `blog-post.html?id=${postId}`; // redirect to blog-post.html with post ID as query parameter
+    });
+  });
+};
+
+/*-------------- Get Individual Blog Post --------------*/
+const getBlogPost = async (postId) => {
+  try {
+    const response = await fetch(`https://headless-wp.pernilsen.dev/wp-json/wp/v2/posts/${postId}`);
+    const post = await response.json();
+    showPost(post);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+/*-------------- Show Individual Blog Post --------------*/
+const showPost = (post) => {
+  blogContainer.innerHTML = ""; // clear existing posts from the container
+
+  const postContainer = document.createElement("div");
+  postContainer.classList.add("blog-post");
+
+  const title = post.title.rendered;
+  const content = post.content.rendered;
+
+  const postHtml = `<h1>${title}</h1>
+                    ${content}`;
+  postContainer.innerHTML = postHtml;
+
+  blogContainer.appendChild(postContainer);
+};
+
+/*-------------- Number of posts per page, page number, total pages and multiple request prevention --------------*/
+let perPage = 6;
+let currentPage = 1;
+let totalPages;
+let isLoading = false;
+
+/*-------------- Load More Posts --------------*/
+const loadMorePosts = () => {
+  if (!isLoading && currentPage < totalPages) {
+    currentPage++; // increment page number
+    getBlogPosts(); // fetch and render more posts
   }
 
-  visiblePosts = lastPostIndex;
-  console.log("Visible posts: ", visiblePosts);
-
-  if (visiblePosts >= allBlogPosts.length) {
-    loadMoreBtn.style.display = "none";
-    hiddenPostsContainer.style.display = "block";
-    hideButtonContainer.style.display = "none";
+  /*-------------- Remove "Load More" Button --------------*/
+  if (currentPage >= totalPages) {
+    loadMoreContainer.remove();
   }
-});
+};
+
+getBlogPosts();
+
+/*-------------- "Load More" Button --------------*/
+const loadMoreContainer = document.createElement("div");
+loadMoreContainer.id = "load-more-container";
+loadMoreContainer.classList.add("load-button");
+
+const loadMoreButton = document.createElement("button");
+loadMoreButton.id = "load-more-btn";
+loadMoreButton.classList.add("load");
+loadMoreButton.textContent = "Load More";
+loadMoreButton.addEventListener("click", loadMorePosts);
+
+loadMoreContainer.appendChild(loadMoreButton);
+
+blogContainer.after(loadMoreContainer);
