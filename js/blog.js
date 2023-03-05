@@ -1,3 +1,5 @@
+/*-------------- Blog page --------------*/
+
 /*-------------- Select div/container --------------*/
 const blogContainer = document.querySelector(".blog-layout");
 
@@ -45,19 +47,19 @@ const showPosts = (posts) => {
     const title = post.title.rendered;
 
     const blogTextHtml = `<h2><a href="#" data-post-id="${post.id}">${title}</a></h2>
-                            <p>${excerpt}</p>`;
+    <p>${excerpt}</p>`;
     blogText.innerHTML = blogTextHtml;
 
     postContainer.appendChild(blogImg);
     postContainer.appendChild(blogText);
     blogContainer.appendChild(postContainer);
 
-    // Add event listener to the blog post's anchor tag
+    /*-------------- Add eventlistener to anchor tag--------------*/
     const postLink = blogText.querySelector("a");
     postLink.addEventListener("click", (event) => {
-      event.preventDefault(); // prevent default link behavior
+      event.preventDefault();
       const postId = event.target.getAttribute("data-post-id");
-      window.location.href = `blog-post.html?id=${postId}`; // redirect to blog-post.html with post ID as query parameter
+      window.location.href = `blog-post.html?id=${postId}`;
     });
   });
 };
@@ -75,7 +77,7 @@ const getBlogPost = async (postId) => {
 
 /*-------------- Show Individual Blog Post --------------*/
 const showPost = (post) => {
-  blogContainer.innerHTML = ""; // clear existing posts from the container
+  blogContainer.innerHTML = "";
 
   const postContainer = document.createElement("div");
   postContainer.classList.add("blog-post");
@@ -99,8 +101,8 @@ let isLoading = false;
 /*-------------- Load More Posts --------------*/
 const loadMorePosts = () => {
   if (!isLoading && currentPage < totalPages) {
-    currentPage++; // increment page number
-    getBlogPosts(); // fetch and render more posts
+    currentPage++;
+    getBlogPosts();
   }
 
   /*-------------- Remove "Load More" Button --------------*/

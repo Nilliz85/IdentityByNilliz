@@ -1,36 +1,4 @@
-// /*---------------- Fetch post id from url ----------------*/
-// const urlParams = new URLSearchParams(window.location.search);
-// const postId = urlParams.get("id");
-
-// /*---------------- Select the post container ----------------*/
-// const postContainer = document.querySelector(".blog-post-container");
-// const topContainer = postContainer.querySelector(".top");
-// const featuredImage = postContainer.querySelector(".featured-image");
-// const contentContainer = postContainer.querySelector(".content");
-
-// /*---------------- Fetch and show posts ----------------*/
-// async function getPost() {
-//   try {
-//     const response = await fetch(`https://headless-wp.pernilsen.dev/wp-json/wp/v2/posts/${postId}`);
-//     const post = await response.json();
-//     console.log(postId);
-
-//     topContainer.querySelector("h1").textContent = post.title.rendered;
-//     topContainer.querySelectorAll(".info span")[1].textContent = new Date(post.date).toLocaleDateString();
-//     featuredImage.querySelector("img").setAttribute("src", post.featured_media_src_url);
-
-//     const content = document.createElement("div");
-//     content.innerHTML = post.content.rendered;
-//     content.querySelectorAll("img").forEach((img) => {
-//       img.setAttribute("src", img.dataset.src);
-//     });
-//     contentContainer.appendChild(content);
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
-
-// getPost();
+/*---------------- Individual Blog Posts ----------------*/
 
 /*---------------- Fetch post id from url ----------------*/
 const urlParams = new URLSearchParams(window.location.search);
