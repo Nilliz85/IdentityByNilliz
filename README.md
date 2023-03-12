@@ -4,7 +4,7 @@
 
 The assignment for the final exam of year 1. At Noroff School of Technology & Digital Media
 
-A New Portfolio Website
+# A New Portfolio Website
 
 The final exam assignment of year 1 is creating a blog about a topic of our choosing. i desided to make this Blog about my "journey" to becoming a frontend developer. and life in the tech business, and to use this as a part of my Portfolio. this page will according to the assignment@s criterias be a headless wordpress site which i then build from the ground up using what i learned in HTML/CSS and javascript, but also the different design courses we have gone through.
 
@@ -18,22 +18,23 @@ The final exam assignment of year 1 is creating a blog about a topic of our choo
 
 
 ## Assignment
-- The site must be have a design that appeals to the target audience.
-- The site must have at least 4-6 pages.
-- Compositional principles, typography, and color schemes must be considered.
-- The site should be WCAG compliant and accessibility taken into account.
+- The site must be have a Home page, About page, List of blog posts,Blog post specific pages, Contact page.
+- It must be a headless WordPress blog page where you use REST API to get the posts's and images for the blog
+- The Front end is to be built manually by using HTML, CSS and JavaScript.
 - Your HTML should be semantic and neatly indented.
 - The site should use external CSS style sheets which follow the DRY principle.
 - The site should download quickly, and not be overly "heavy". Images should not be over 200kb.
 - The site should take WCAG principles into consideration, especially regarding hierarchy, navigation, and color usage.
 - The site should be responsive, attractive, and easy to use on a variety of devices.
 - The site should show consideration for content strategy and SEO (consider your use of meta tags and alt text).
--  The GitHub repo for the project should be set to private. You do not need to submit this with your project.
+- The GitHub repo for the project should be set to private. You do not need to submit this with your project.
+
 
 
 ## Built With
 - [HTML](https://www.w3schools.com/html/)
 - [CSS](https://www.w3schools.com/css/)
+- [JavaScript](https://www.javascript.com/)
 
 
 ### Clone Repo
